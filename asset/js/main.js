@@ -19,5 +19,5 @@ $(document).ready(function () {
 
 // ==================order show ======================
 $(document).ready(function () {
-    $("#myTable").DataTable();
+    $("#OrderTable").DataTable();
 });

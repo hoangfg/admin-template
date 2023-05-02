@@ -130,8 +130,8 @@ img.user-note {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--main-grident);
-  color: var(--white-color);
+  background: var(--second-grident);
+  /* color: var(--white-color); */
 }
 p.status-link span {
   color: #fff !important;
@@ -161,7 +161,7 @@ p.m-user-name {
 p.user-role {
   font-size: 10px;
 
-  color: var(--main-color);
+  color: var(--third-color);
 }
 
 /* =================profile dropdown menu===================== */

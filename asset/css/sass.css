@@ -10,9 +10,15 @@
 :root {
   --header-height: 3rem;
   /* =============color================== */
-  --main-color: #c20d5a;
+  --main-color: rgb(26, 195, 94) ;
   --second-color: rgb(7, 3, 45);
+  --third-color: #c20d5a;
   --main-grident: linear-gradient(
+    121deg,
+    rgb(26, 195, 94) 25%,
+    rgba(11, 238, 166, 0.95) 100%
+  );
+  --second-grident: linear-gradient(
     121deg,
     rgba(194, 13, 90, 1) 25%,
     rgb(255 0 194/42%) 100%
@@ -120,29 +126,54 @@ table.table {
 }
 
 .di-btn {
-    color:aliceblue;
-    padding: .7rem var(--mb-2);
-    font-weight: 500;
-    border-radius: 3px;
-    box-shadow: 0px 6px 19px 1px #06041d4a;
-
+  color: aliceblue;
+  padding: 0.7rem var(--mb-2);
+  font-weight: 500;
+  border-radius: 3px;
+  box-shadow: 0px 6px 19px 1px #06041d4a;
 }
 
 .purple-gradient {
-    background: var(--main-grident);
+  background: var(--second-grident);
 }
-
+.status-tb-btn {
+  padding: 0 10px;
+  border-radius: 5px;
+  color: var(--white-color);
+}
 .bg-cla {
-    background: var(--main-color);
+  background: linear-gradient(
+    121deg,
+    rgb(26, 195, 94) 25%,
+    rgba(11, 238, 166, 0.95) 100%
+  );
+}
+.bg-clb {
+  background: linear-gradient(
+    121deg,
+    rgba(194, 13, 90, 1) 25%,
+    rgb(255 0 194/42%) 100%
+  );
 }
 
 .bg-clc {
-    background: linear-gradient(121deg, rgb(92 26 195) 25% , rgb(136 25 206 / 95%) 100%);
+  background: linear-gradient(
+    121deg,
+    rgb(92 26 195) 25%,
+    rgb(136 25 206 / 95%) 100%
+  );
 }
-.bg-clc {
-    background: linear-gradient(121deg, rgb(26 179 195) 25% , rgb(25 97 206 / 95%) 100%);
+.bg-cld {
+  background: linear-gradient(
+    121deg,
+    rgb(26 179 195) 25%,
+    rgb(25 97 206 / 95%) 100%
+  );
 }
-.bg-clc {
-    background: linear-gradient(121deg, rgb(232 202 53) 25% , rgb(206 125 25 / 95%) 100%);
+.bg-cle {
+  background: linear-gradient(
+    121deg,
+    rgb(232 202 53) 25%,
+    rgb(206 125 25 / 95%) 100%
+  );
 }
-

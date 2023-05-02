@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="asset/css/bootstrap/bootstrap.min.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css"
+      href="asset/css/data-tables/jquery.dataTables.css"
     />
     <link rel="stylesheet" href="asset/css/chart/apexcharts.css" />
     <link rel="stylesheet" href="asset/css/sass.css" />
@@ -341,7 +341,7 @@
           <div class="all-admin my-5">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6 col-12 mb-1">
                   <div class="admin-list">
                     <p class="admin-ac-title">All Admin</p>
                     <ul class="admin-ul">
@@ -462,12 +462,12 @@
                   </div>
                 </div>
 
-                <div class="col-md-8">
-                  <div class="admin-list">
-                    <p class="admin-ac-title">Order Status</p>
+                <div class="col-md-8 col-sm-6 col-12 mb-1">
+                  <div class="order-list">
+                    <p class="order-ac-title">Order Status</p>
                     <div class="data-tables-section table-responsive">
                       <table
-                        id="myTable"
+                        id="OrderTable"
                         class="table table-striped"
                         style="width: 100%"
                       >
@@ -478,25 +478,20 @@
                             <th>Office</th>
                             <th>Age</th>
                             <th>Start date</th>
-                            <th>Salary</th>
+                            <th>Status</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>$320,800</td>
-                          </tr>
+                        <tbody class="order-view-tb">
+                          
                           <tr>
                             <td>Garrett Winters</td>
                             <td>Accountant</td>
                             <td>Tokyo</td>
                             <td>63</td>
                             <td>2011-07-25</td>
-                            <td>$170,750</td>
+                            <td>
+                              <a href="#" class="status-tb-btn bg-cla">Success</a>
+                            </td>
                           </tr>
                           <tr>
                             <td>Ashton Cox</td>
@@ -504,7 +499,9 @@
                             <td>San Francisco</td>
                             <td>66</td>
                             <td>2009-01-12</td>
-                            <td>$86,000</td>
+                            <td>
+                              <a href="#" class="status-tb-btn bg-clb">Open</a>
+                            </td>
                           </tr>
                           <tr>
                             <td>Cedric Kelly</td>
@@ -512,7 +509,9 @@
                             <td>Edinburgh</td>
                             <td>22</td>
                             <td>2012-03-29</td>
-                            <td>$433,060</td>
+                            <td>
+                              <a href="#" class="status-tb-btn bg-clc">On Hold</a>
+                            </td>
                           </tr>
                           <tr>
                             <td>Airi Satou</td>
@@ -520,7 +519,9 @@
                             <td>Tokyo</td>
                             <td>33</td>
                             <td>2008-11-28</td>
-                            <td>$162,700</td>
+                            <td>
+                              <a href="#" class="status-tb-btn bg-cld">Checked</a>
+                            </td>
                           </tr>
                           <tr>
                             <td>Brielle Williamson</td>
@@ -528,7 +529,9 @@
                             <td>New York</td>
                             <td>61</td>
                             <td>2012-12-02</td>
-                            <td>$372,000</td>
+                            <td>
+                              <a href="#" class="status-tb-btn bg-cle">Process</a>
+                            </td>
                           </tr>
                           <tr>
                             <td>Herrod Chandler</td>
@@ -536,7 +539,9 @@
                             <td>San Francisco</td>
                             <td>59</td>
                             <td>2012-08-06</td>
-                            <td>$137,500</td>
+                            <td>
+                              <a href="#" class="status-tb-btn bg-cla">Success</a>
+                            </td>
                           </tr>
 
                           <tr>
@@ -545,7 +550,9 @@
                             <td>New York</td>
                             <td>30</td>
                             <td>2011-09-03</td>
-                            <td>$345,000</td>
+                            <td>
+                              <a href="#" class="status-tb-btn bg-cla">Success</a>
+                            </td>
                           </tr>
                           <tr>
                             <td>Yuri Berry</td>
@@ -553,7 +560,9 @@
                             <td>New York</td>
                             <td>40</td>
                             <td>2009-06-25</td>
-                            <td>$675,000</td>
+                           <td>
+                              <a href="#" class="status-tb-btn bg-cla">Success</a>
+                            </td>
                           </tr>
 
                           <tr>
@@ -562,10 +571,22 @@
                             <td>Edinburgh</td>
                             <td>42</td>
                             <td>2010-12-22</td>
-                            <td>$92,575</td>
+                            <td>
+                              <a href="#" class="status-tb-btn bg-cla">Success</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Gavin Joyce</td>
+                            <td>Developer</td>
+                            <td>Edinburgh</td>
+                            <td>42</td>
+                            <td>2010-12-22</td>
+                           <td>
+                              <a href="#" class="status-tb-btn bg-cla">Success</a>
+                            </td>
                           </tr>
                         </tbody>
-                        <tfoot>
+                        <!-- <tfoot>
                           <tr>
                             <th>Name</th>
                             <th>Position</th>
@@ -574,7 +595,7 @@
                             <th>Start date</th>
                             <th>Salary</th>
                           </tr>
-                        </tfoot>
+                        </tfoot> -->
                       </table>
                     </div>
                   </div>
@@ -588,7 +609,7 @@
     </div>
     <script src="asset/js/jquery.min.js"></script>
 
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <script src="asset/js/data-tables/jquery.dataTables.js"></script>
 
 
 

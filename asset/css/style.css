@@ -117,3 +117,34 @@ p.activity-text {
   height: 15px;
   border-radius: 50%;
 }
+
+/* =======order status================== */
+.order-list {
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--white-color);
+  box-shadow: -2px 3px 13px 0px #ddd6;
+}
+
+p.order-ac-title {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 5px;
+  display: inline-block;
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+  line-height: 1.5;
+  margin-bottom: 13px;
+}
+tbody.order-view-tb tr {
+  border-bottom: #e6e6e6;
+}
+
+tbody.order-view-tb tr.odd {
+  --bs-table-accent-bg: #fff;
+}
+
+.no-footer {
+  border-bottom: 1px solid #f9f9f9 !important;
+}
+
