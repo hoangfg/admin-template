@@ -16,3 +16,8 @@ $(document).ready(function () {
         $(".content-wrapper").toggleClass("hide");
     });
 });
+
+// ==================order show ======================
+$(document).ready(function () {
+    $("#myTable").DataTable();
+});

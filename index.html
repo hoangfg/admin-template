@@ -13,6 +13,11 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="asset/css/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css"
+    />
+    <link rel="stylesheet" href="asset/css/chart/apexcharts.css" />
     <link rel="stylesheet" href="asset/css/sass.css" />
     <link rel="stylesheet" href="asset/css/layout.css" />
     <link rel="stylesheet" href="asset/css/style.css" />
@@ -25,7 +30,12 @@
         <header class="header navbar navbar-expand-sm expand-header">
           <div class="header-left d-flex">
             <div class="logo">HoangFG</div>
-            <a href="#" id="toggleSidebar" class="sidebarCollapse" data-placement="bottom">
+            <a
+              href="#"
+              id="toggleSidebar"
+              class="sidebarCollapse"
+              data-placement="bottom"
+            >
               <span class="fa-solid fa-bars"></span>
             </a>
           </div>
@@ -201,22 +211,18 @@
                 id="Notify"
                 data-bs-toggle="dropdown"
               >
-                <img
-                  src="asset/img/user-2-svgrepo-com.svg"
-                  alt=""
-                  class="icon"
-                />
+                <img src="asset/img/morgan-le-fay.jpg" alt="" class="icon" />
               </a>
               <div class="dropdown-menu">
                 <div class="user-profile-section">
                   <div class="media mx-auto">
                     <img
-                      src="asset/img/bell.png"
+                      src="asset/img/morgan-le-fay.jpg"
                       alt=""
                       class="img-fluid mr-2"
                     />
                     <div class="media-body">
-                      <h5>HoangFG</h5>
+                      <h5>Morgan le fay</h5>
                       <p>super admin</p>
                     </div>
                   </div>
@@ -319,10 +325,8 @@
                   </li>
                 </ul>
               </li>
-               <li>
-                <a href="#">
-                  <i class="fa fa-sign-out-alt"></i> Logout
-                </a>
+              <li>
+                <a href="#"> <i class="fa fa-sign-out-alt"></i> Logout </a>
               </li>
             </ul>
           </nav>
@@ -332,22 +336,246 @@
       <!-- ----------------SIDEBAR END -->
 
       <div class="content-wrapper">
-        <section class="dashboard-top-sec">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="bg-white top-chart-earn">
-                  <div class="row">
-                    <div class="col-sm-4 my-2 pe-0">
-                      <div class="last-month">
-                        <h5>Fashboard</h5>
-                        <p>Overview of latest Month</p>
-                        <div class="earn">
-                          <h2>$3367.98</h2>
-                          <p>Current Month Sales</p>
+        <!-- ================== Admin show and order status table ======================== -->
+        <section>
+          <div class="all-admin my-5">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="admin-list">
+                    <p class="admin-ac-title">All Admin</p>
+                    <ul class="admin-ul">
+                      <li class="admin-li">
+                        <img
+                          src="asset/img/morgan-le-fay.jpg"
+                          alt=""
+                          class="admin-image"
+                        />
+                        <div class="admin-ac-details">
+                          <div>
+                            <a href="#" class="admin-name">Morgan le fay</a>
+                            <p class="activity-text">Active now</p>
+                          </div>
+                          <div class="status bg-success"></div>
                         </div>
-                        <a href="#" class="di-btn purple-gradient">Last Month Sumary</a>
-                      </div>
+                      </li>
+
+                      <li class="admin-li">
+                        <img
+                          src="asset/img/ong-lao-tren-nui-king-hassan.jpg"
+                          alt=""
+                          class="admin-image"
+                        />
+                        <div class="admin-ac-details">
+                          <div>
+                            <a href="#" class="admin-name">Hassan</a>
+                            <p class="activity-text">Active 15 min ago</p>
+                          </div>
+                          <div class="status bg-primary"></div>
+                        </div>
+                      </li>
+                      <li class="admin-li">
+                        <img
+                          src="asset/img/376_Tiamat_2.png"
+                          alt=""
+                          class="admin-image"
+                        />
+                        <div class="admin-ac-details">
+                          <div>
+                            <a href="#" class="admin-name">Tiamat</a>
+                            <p class="activity-text">Active 20 min ago</p>
+                          </div>
+                          <div class="status bg-warning"></div>
+                        </div>
+                      </li>
+                      <li class="admin-li">
+                        <img
+                          src="asset/img/muramasa.jpg"
+                          alt=""
+                          class="admin-image"
+                        />
+                        <div class="admin-ac-details">
+                          <div>
+                            <a href="#" class="admin-name">Muramasa</a>
+                            <p class="activity-text">Active 2 days ago</p>
+                          </div>
+                          <div class="status bg-danger"></div>
+                        </div>
+                      </li>
+                      <li class="admin-li">
+                        <img
+                          src="asset/img/emiya.jpg"
+                          alt=""
+                          class="admin-image"
+                        />
+                        <div class="admin-ac-details">
+                          <div>
+                            <a href="#" class="admin-name">Emiya</a>
+                            <p class="activity-text">Active now</p>
+                          </div>
+                          <div class="status bg-success"></div>
+                        </div>
+                      </li>
+                      <li class="admin-li">
+                        <img
+                          src="asset/img/skadi.jpg"
+                          alt=""
+                          class="admin-image"
+                        />
+                        <div class="admin-ac-details">
+                          <div>
+                            <a href="#" class="admin-name">Skadi</a>
+                            <p class="activity-text">Active now</p>
+                          </div>
+                          <div class="status bg-success"></div>
+                        </div>
+                      </li>
+                      <li class="admin-li">
+                        <img
+                          src="asset/img/gudako.png"
+                          alt=""
+                          class="admin-image"
+                        />
+                        <div class="admin-ac-details">
+                          <div>
+                            <a href="#" class="admin-name">Gudako</a>
+                            <p class="activity-text">Active 13 min ago</p>
+                          </div>
+                          <div class="status bg-primary"></div>
+                        </div>
+                      </li>
+                      <li class="admin-li">
+                        <img
+                          src="asset/img/gilgames.jpg"
+                          alt=""
+                          class="admin-image"
+                        />
+                        <div class="admin-ac-details">
+                          <div>
+                            <a href="#" class="admin-name">Gilgames</a>
+                            <p class="activity-text">Active 5 days ago</p>
+                          </div>
+                          <div class="status bg-danger"></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-8">
+                  <div class="admin-list">
+                    <p class="admin-ac-title">Order Status</p>
+                    <div class="data-tables-section table-responsive">
+                      <table
+                        id="myTable"
+                        class="table table-striped"
+                        style="width: 100%"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011-04-25</td>
+                            <td>$320,800</td>
+                          </tr>
+                          <tr>
+                            <td>Garrett Winters</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>63</td>
+                            <td>2011-07-25</td>
+                            <td>$170,750</td>
+                          </tr>
+                          <tr>
+                            <td>Ashton Cox</td>
+                            <td>Junior Technical Author</td>
+                            <td>San Francisco</td>
+                            <td>66</td>
+                            <td>2009-01-12</td>
+                            <td>$86,000</td>
+                          </tr>
+                          <tr>
+                            <td>Cedric Kelly</td>
+                            <td>Senior Javascript Developer</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                            <td>2012-03-29</td>
+                            <td>$433,060</td>
+                          </tr>
+                          <tr>
+                            <td>Airi Satou</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>33</td>
+                            <td>2008-11-28</td>
+                            <td>$162,700</td>
+                          </tr>
+                          <tr>
+                            <td>Brielle Williamson</td>
+                            <td>Integration Specialist</td>
+                            <td>New York</td>
+                            <td>61</td>
+                            <td>2012-12-02</td>
+                            <td>$372,000</td>
+                          </tr>
+                          <tr>
+                            <td>Herrod Chandler</td>
+                            <td>Sales Assistant</td>
+                            <td>San Francisco</td>
+                            <td>59</td>
+                            <td>2012-08-06</td>
+                            <td>$137,500</td>
+                          </tr>
+
+                          <tr>
+                            <td>Jenette Caldwell</td>
+                            <td>Development Lead</td>
+                            <td>New York</td>
+                            <td>30</td>
+                            <td>2011-09-03</td>
+                            <td>$345,000</td>
+                          </tr>
+                          <tr>
+                            <td>Yuri Berry</td>
+                            <td>Chief Marketing Officer (CMO)</td>
+                            <td>New York</td>
+                            <td>40</td>
+                            <td>2009-06-25</td>
+                            <td>$675,000</td>
+                          </tr>
+
+                          <tr>
+                            <td>Gavin Joyce</td>
+                            <td>Developer</td>
+                            <td>Edinburgh</td>
+                            <td>42</td>
+                            <td>2010-12-22</td>
+                            <td>$92,575</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                          </tr>
+                        </tfoot>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -355,10 +583,20 @@
             </div>
           </div>
         </section>
+        <!-- ================== Admin show and order status table end ======================== -->
       </div>
     </div>
     <script src="asset/js/jquery.min.js"></script>
-    <script src="asset/js/main.js"></script>
+
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+
+
+
     <script src="asset/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="asset/js/chart/apexcharts.min.js"></script>
+    <script src="asset/js/chart/charts.js"></script>
+    <script src="asset/js/main.js"></script>
   </body>
 </html>
